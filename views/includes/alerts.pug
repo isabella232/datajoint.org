@@ -1,0 +1,26 @@
+//- .alert.alert-success.alert-dismissible.navbar-fixed-top#signupSuccess(style="display:none")
+//-     button.close(type="button", data-dismiss="alert", aria-label="Close") 
+//-         span(aria-hidden="true") &times;
+//-     p#signupSuccessText Thanks for signing up! You are now on our list!
+//- .alert.alert-success.alert-dismissible.navbar-fixed-top#signupDuplicate(style="display:none")
+//-     button.close(type="button", data-dismiss="alert", aria-label="Close") 
+//-         span(aria-hidden="true") &times;
+//-     p#signupDuplicateText No worries - You're already on our list! If you wish to make modifications to your signed up status - please directly contact support@vathes.com
+//- .alert.alert-warning.alert-dismissible.navbar-fixed-top#signupError(style="display:none")
+//-     button.close(type="button", data-dismiss="alert", aria-label="Close") 
+//-         span(aria-hidden="true") &times;
+//-     p#signupErrorText Hmm...we're having trouble getting you on the list...
+
+-if (error && error.length > 0)
+            
+    .alert.alert-danger.alert-dismissible.fade-in(role="alert")
+        button.close(type="button" data-dismiss="alert" aria-label="Close")
+            span(aria-hidden="true") ×
+        p= error
+
+-if (success && success.length > 0)
+            
+    .alert.alert-success.alert-dismissible.fade-in(role="alert")
+        button.close(type="button" data-dismiss="alert" aria-label="Close")
+            span(aria-hidden="true") ×
+        p= success

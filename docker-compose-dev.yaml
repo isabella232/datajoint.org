@@ -1,0 +1,28 @@
+version: '2.4'
+x-net: &net
+  networks:
+    - main
+services:
+  datajoint.org:
+    <<: *net
+    build:
+      context: .
+    image: datajoint/datajoint-org
+    env_file: .env
+    volumes:
+      - .:/src/app
+    command: sh -c "npm install -g nodemon && nodemon app.js"
+  fakeservices.datajoint.io:
+    <<: *net
+    image: datajoint/nginx:v0.0.17
+    environment:
+      - SUBDOMAINS=fakeservices
+      - URL=datajoint.io
+      - HTTPS_PORT=2000
+      - ADD_hub_TYPE=REST
+      - ADD_hub_ENDPOINT=datajoint.org:3456
+      - ADD_hub_PREFIX=/
+    ports:
+      - "443:2000"
+networks:
+  main:

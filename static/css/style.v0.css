@@ -1,0 +1,597 @@
+/* -----google fonts reference------*/
+/*font-family: 'Raleway', sans-serif;*/
+/*font-family: 'PT Sans', sans-serif;*/
+/*font-family: 'Titillium Web', sans-serif;*/
+/*font-family: 'Abel', sans-serif;*/
+
+* { 
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box; 
+  }
+  
+  html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Abel', sans-serif;
+  }
+
+/* body {
+    width: 100vw;
+    height: 100%;
+    font-family: 'Abel', sans-serif;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+} */
+
+/* nav.navbar {
+    min-height: 70px;
+    margin-bottom: 0;
+}
+
+.nav, .navbar-nav {
+    height: 70px;
+    padding-top: 10px;
+    font-size: 1.8rem;
+}
+
+.nav li.dropdown {
+    top: -12px;
+}
+.nav li.dropdown a.dropdown-toggle {
+    height: 70px;
+    padding-top: 27px;
+} */
+
+
+
+.alert {
+    position: relative;
+    z-index:990;
+}
+
+/* Index page */
+.corner-ribbon {
+    width: 77%;
+    background: rgb(238, 126, 51);
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    letter-spacing: 1px;
+    color: #f0f0f0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    box-shadow: none;
+    border: none;
+  }
+
+.corner-ribbon:after {
+    content: '';
+    border: 21.5px solid rgb(238, 126, 51);
+    border-right-color: transparent;
+    border-right-width: 21px;
+    position: absolute;
+    top: 0;
+    right: -27px;
+}
+
+
+.top-section {
+    padding-top: 40px;
+    padding-bottom: 3%;
+    text-align: center;
+}
+
+img#toplogo {
+    width: 90%;
+    max-width:600px;
+    /*min-width: 200px;*/
+}
+
+section#catchphrase {
+    /*border-top: dotted 4px #78d5d7;*/
+    padding-top: .5%;
+    padding-bottom: 2.5%;
+}
+
+p.catchText {
+    color: white;
+    text-align: left;
+    font-size: 3.2rem;
+}
+
+/* before login */
+section#signup-banner {
+    /*border-top: solid 20px #78d5d7;*/
+    border-bottom: solid 20px #78d5d7;
+    padding: 10% 0;
+    background-color: #b1b1b1;
+    background-image: url(../images/dataJointBackdrop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top right;
+    background-attachment: fixed;
+}
+
+.signup {
+    text-align: center;
+}
+
+.signupText {
+    padding-left: 6%;
+    color: white;
+    text-align: left;
+}
+
+/* after login - signup banner section */
+.info-hover-text {
+    color: white;
+    font-size: 2.0rem;
+}
+
+i.fa.fa-exclamation-circle#playgroundInfo {
+    color: white;
+}
+
+
+.about-section {
+    text-align: center;
+    padding: 9% 10% 4% 10%;
+    color: #000;
+    background: url(../images/watercolorWhite.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-color:#f2f8fc; lightest tint of vathesblue*/
+    border-bottom: solid 27px #78d5d7; /* DataJoint darkblue*/
+}
+
+.login-text {
+    margin-right: 15px;
+    line-height: 2.3;
+    font-size: 2.0rem;
+    float: right;
+}
+
+h1.section-title {
+    margin-top: 4%;
+}
+
+img#abouticon {
+    width:95px;
+    margin-bottom:15px;
+}
+
+p.aboutText {
+    padding: 15px 25px 10px 25px;
+    font-size: 1.95em;
+    text-align: justify;
+}
+
+/* Dashboard */
+/* button.launch-playground {
+    padding: 25px;
+    background-color: #78d5d7; 
+    font-size: 3.3rem;
+    color: white;
+}
+
+button.launch-playground:hover {
+    background-color: #62acad; 
+    color: rgb(226, 226, 226);
+} */
+
+
+
+@media only screen and (max-width: 767px) {
+  /* phones */
+    .about-section {
+        padding: 6% 2% 0% 2%;
+    }
+    p.aboutText {
+        font-size: 1.2em;
+        text-align: left;
+    }
+    .sigupContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    .signupText {
+        padding-left: 4%;
+        padding-bottom: 2%;
+    }
+    /* #signupText {
+        padding-top: 5px;
+        float: center;
+    } */
+
+    #signupButton,
+    #launchButton {
+        padding: 20px 40px;
+        margin: auto;
+        font-size: 2.5em;
+    }
+    p.catchText {
+        font-size: 2.0rem;
+    }
+    img#abouticon {
+        width:65px;
+        margin-bottom:0px;
+    }
+}
+
+
+.howto-section {
+    padding-bottom: 5%;
+    text-align: center;
+    background-size: cover;
+}
+
+img.opensourcedj {
+    width: 42%;
+}
+
+.faicon {
+    display: inline-block;
+    vertical-align: middle;
+}
+.DJ-github {
+    font-size: 140%;
+    display: block;
+}
+
+.product-text {
+    font-size: 200%;
+}
+.product-text-group {
+    text-align: center;
+
+}
+
+a:link {
+        color: black;
+        text-decoration: none;
+    } 
+
+a:visited {
+        color: black;
+        text-decoration: none;
+    } 
+
+a:active {
+        color: #5db7c8;
+        text-decoration: none;
+    } 
+
+a:hover {
+        color: #5db7c8;
+        text-decoration: none;
+    }
+a.privacy-policy {
+    color: #5db7c8;
+    text-decoration: none;
+}
+a.privacy-policy:hover {
+    color: #4b8f9c;
+    text-decoration: none;
+}
+span.linebreak {
+    display: inline-block;
+}
+
+
+@media only screen and (max-width: 767px) {
+  /* small screens */
+    .corner-ribbon {
+        font-size: 1.4rem;
+        line-height: 32px
+    }
+    .corner-ribbon:after {
+        border-width: 17.5px;
+    }
+
+    .login-text {
+        font-size: 1.8rem;
+        line-height: 2.0;
+        margin-right: 9px;
+    }
+
+    h1.section-title {
+        font-size:200%;
+    }
+
+    h2 {
+        font-size: 180%;
+    }
+
+    h3 {
+        font-size: 180%;
+    }
+    
+    img.opensourcedj {
+        width: 66%;
+    }
+    .DJ-github {
+        text-align: center;
+        font-size: 120%;
+    }
+    .product-text {
+        font-size: 140%;
+        text-align: center;
+    }
+    span.linebreak {
+        display: block;
+    }
+}
+
+
+.contact-section {
+    padding-top: 1%;
+    margin-top: 0;
+    padding-bottom: 6.5%;
+    text-align: center;
+    background: linear-gradient(to bottom right, #e6f1f9, #f2f8fc);/*to lightest tint of vathesblue*/
+    color: #325069; /*dark teal*/
+    border-top: solid 27px #ffbf60; /* DataJoint yellow*/
+}
+
+
+
+#signupButton {
+    padding: 32px 80px;
+    transform: translateY(23%);
+    font-size: 2.9em;
+    background-color: #57c0d1; /*darker blue square color*/
+    border-color: #54a8b7;
+    border-right-width: 2px;
+    border-bottom-width:2px;
+    border-top-width: 0px; 
+    border-left-width: 0px;
+    color: white;
+}
+#signupButton:hover {
+    background-color: #94c4c9; /*darker blue square color*/
+    border-color: #94c4c9;
+    color: white;
+}
+
+#launchButton {
+    padding: 32px 80px;
+    transform: translateY(23%);
+    font-size: 2.9em;
+    background-color: #e9a033; /* darker orange color */
+    border-color: #e9a033;
+    border-right-width: 2px;
+    border-bottom-width:2px;
+    border-top-width: 0px; 
+    border-left-width: 0px;
+    color: white;
+}
+#launchButton:hover {
+    background-color: #c7892c; /* even darker blue square color*/
+    border-color: #c7892c;
+    color: white;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+  /* small screens */
+    #signupButton,
+    #launchButton {
+        padding: 20px 40px;
+        margin: auto;
+        font-size: 2.5em;
+    }
+}
+
+.djNeuroCard {
+    width: 420px;
+    height: 200px;
+    background: white;
+    display: inline-flex;
+    flex-direction: row;
+    border-radius: 10px;
+}
+
+.djNeuroCard img {
+    margin: 20px 10px;
+    width: 160px;
+    height: 160px;
+}
+
+.djNeuroCard p {
+    font-size: 1.8rem;
+    text-align: left;
+    background-color: midnightblue;
+    color: white;
+    padding: 40px 10px 10px 15px;
+    margin-bottom: 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.djNeuroCard p a,
+.djNeuroCard p a:visited {
+    color: rgb(183, 128, 235)
+}
+
+.djNeuroCard p a:hover,
+.djNeuroCard p a:active {
+    color: rgb(235, 128, 208);
+}
+
+@media only screen and (max-width: 460px) {
+    /* phone  */
+    .corner-ribbon {
+        font-size: 1.0rem;
+        line-height: 28px
+    }
+    .corner-ribbon:after {
+        border-width: 15.5px;
+    }
+
+    .login-text {
+        font-size: 1.1rem;
+        line-height: 2.9;
+        margin-right: -3px;
+    }
+
+    #signupButton,
+    #launchButton {
+        padding: 15px 30px;
+        margin: auto;
+        font-size: 2.3em;
+    }
+
+    .djNeuroCard {
+        width: 300px;
+        height: 145px;
+        border-radius: 7px;
+    }
+
+    .djNeuroCard img {
+        margin: 14px 7px;
+        width: 114px;
+        height: 114px;
+    }
+
+    .djNeuroCard p {
+        font-size: 1.4rem;
+        padding: 28px 7px 7px 10px;
+        margin-bottom: 0;
+        border-radius: 0 7px 7px 0;
+    }
+}
+@media only screen and (max-width: 350px) {
+    /* tiny phone  */
+    .corner-ribbon {
+        font-size: 1.0rem;
+        line-height: 28px
+    }
+    .corner-ribbon:after {
+        border-width: 15.5px;
+        border-right-width: 15px;
+        right: -15px;
+    }
+    .djNeuroCard {
+        width: 250px;
+        height: 145px;
+        border-radius: 7px;
+    }
+
+    .djNeuroCard img {
+        margin: 14px 7px;
+        width: 114px;
+        height: 114px;
+    }
+
+    .djNeuroCard p {
+        font-size: 1.2rem;
+        padding: 13px 7px 7px 10px;
+        margin-bottom: 0;
+        border-radius: 0 7px 7px 0;
+    }
+}
+
+#slackregister {
+    border-color: #94c4c9;
+    border-right-width: 2px;
+    border-bottom-width:2px;
+    border-top-width: 0px; 
+    border-left-width: 0px;
+    background-color: rgba(255,255,255,0.3);
+    padding: 15px;
+}
+
+#slackregister:hover {
+    background-color: rgba(255,255,255,0.6);    
+}
+
+.slackicon {
+    height: 40px;
+}
+
+.form-check {
+    text-align: left;
+}
+
+.footer-section {
+    padding-top: 1%;
+    text-align: center;
+    color: black;
+    /* position: relative; */
+    /* bottom: 0; */
+}
+
+/* ------ temp NIH BRAIN workshop section */
+.temp-workshop-section {
+    padding-top: 5%;
+    text-align: center;
+    color: rgb(31, 31, 31);
+}
+
+.temp-section {
+    padding-top: 20%;
+}
+
+a.btn-huge {
+  padding: 15px;
+  color: white;
+  background-color: #57c0d1;
+  border-color: #57c0d1;
+  font-size: 1.4em;
+}
+
+.btn-huge:hover,
+.btn-huge:visited {
+  color: white;
+  background-color: #3f909c;
+}
+
+.workshopInfo {
+    font-size: 115%;
+}
+.code-instruction {
+    background:rgb(230, 228, 228); 
+    border:solid 1px rgb(175, 173, 173); 
+    color:#a10707; 
+    font-size: 90%;
+    font-weight: 100;
+    /* font-family: PT Sans; */
+    border-radius:2px;
+}
+
+/* ------ temp 2020 neuromatch workshop section */
+.neuromatchLogo {
+    width: 100%; 
+    background-color: #222222; 
+    text-align:center;
+}
+.neuromatchLogo img {
+    width: 80%;
+}
+img.playgroundscreenshot {
+    width: 440px;
+}
+
+@media only screen and (max-width: 460px) {
+    /* phone  */
+    img.playgroundscreenshot {
+        width: 75%;
+    }
+    .neuromatchLogo img {
+        width: 90%;
+    }
+}
+
+/* ---------- Sign Up Form ------------- */
+/* input[type="checkbox"] {
+    margin:  4px -12px 0;
+} */
+
+

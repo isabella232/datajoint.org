@@ -1,0 +1,18 @@
+doctype html
+html
+    include includes/head.pug
+    body
+        section.top-section#top
+            .container-fluid
+                .col-lg-12
+                    a(href="/")
+                        img#toplogo(src= static_path + "/images/DJiotitle.png" alt="DataJoint logo banner")
+        section
+            .container-fluid
+                .col-lg-12
+                    h3 #{ status }
+                    h4 #{ message }
+
+            include includes/footer.pug
+    script(src= static_path + "/jquery/jquery-1.11.3.min.js")
+    script(src= static_path + "/bootstrap/js/bootstrap.min.js")

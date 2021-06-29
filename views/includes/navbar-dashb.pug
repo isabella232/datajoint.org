@@ -1,0 +1,77 @@
+//- setup for bootstrap 4 css 
+//- nav(class="navbar navbar-expand-lg navbar-light bg-light")
+//-     a(class="navbar-brand" href="/")
+//-         img( height="30" alt="" src=static_path + "/images/DJiotitle.png")
+//-     button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation")
+//-         span(class="navbar-toggler-icon")
+//-     div(class="collapse navbar-collapse" id="navbarNavDropdown")
+//-         ul(class="navbar-nav")
+//-             li(class="nav-item active")
+//-                 a(class="nav-link" href="/dashboard") Dashboard
+//-                     span(class="sr-only") (current)
+        
+//-             li(class="nav-item dropdown float-sm-right")
+//-                 a(class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+//-                     | Account
+//-                 div(class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink")
+//-                     a(class="dropdown-item" href="#") Manage Database
+//-                     a(class="dropdown-item" href="/settings") Settings
+//-                     a(class="dropdown-item" href="/templogout") Logout
+
+
+//- setup for bootstrap 3 css (temporary)
+nav(class="navbar navbar-default")
+    div.container-fluid
+        //- Logo and hamburger get grouped for better mobile display 
+        div.navbar-header
+            button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false")
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand(href="/")
+                img(height="40" alt="" src=static_path + "/images/datajointlogofull.png")
+
+        //- All the menu content that gets toggled with the hamburger
+        - if (isLoggedIn)
+            div(class="collapse navbar-collapse" id="bs-example-navbar-collapse-1")
+                ul(class="nav navbar-nav")
+                    //- li.active
+                    //-     a(href="/user/dashboard") Dashboard 
+                    //-         span.sr-only (current)
+                    //- li.disabled
+                    //-     a(href="/user/dashboard") Dashboard 
+                    //-         span.sr-only 
+                    //- li.disabled
+                    //-     a(href="#") Pipelines
+                    //- li.dropdown
+                    //-     a(href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Learn DataJoint
+                    //-         span.caret
+                    //-     ul.dropdown-menu
+                    //-         li
+                    //-             a(href="https://playground.datajoint.io" target="_blank") Playground
+                    //-         li
+                    //-             a(href="https://docs.datajoint.io/" target="_blank") Documentation
+                    //-         li
+                    //-             a(href="https://tutorials.datajoint.io/" target="_blank") Tutorials
+                          
+
+
+                ul(class="nav navbar-nav navbar-right")    
+                    li.dropdown
+                        a(href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Account 
+                            span.caret
+                        ul.dropdown-menu
+                            //- li.disabled
+                            //-     a(href="#") Manage Database
+                            //- li(role="separator" class="divider")
+                            
+                            li
+                                a(href="/user/settings") User Settings
+                            
+                    li
+                        - if (isLoggedIn)
+                            a(href="/user/logout") Logout
+                        - if (!isLoggedIn)
+                            a(href="/user/login") LogIn
+

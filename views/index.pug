@@ -1,0 +1,115 @@
+//- index.pug
+doctype html
+html(lang="en")
+	include includes/head.pug
+	body
+		include includes/alerts.pug
+		a(href="https://playground.datajoint.io/") 
+			button.corner-ribbon.animated.slideInLeft
+				| Interactive Tutorial Playground Now Available!
+		div.container-fluid
+				div.navbar-right
+					a.login-text(href="https://accounts.datajoint.io/login") #[i(class="fa fa-lock" aria-hidden="true")] Log In
+
+		section.top-section#top
+			.container-fluid
+				.col-lg-12
+					img#toplogo(src= static_path + "/images/datajointlogofull.png" alt="DataJoint logo banner")
+
+		section#signup-banner
+			.container-fluid
+				.col-lg-12.signupContainer
+					//- p.catchText DataJoint&#x2122; is a free, open-source framework for programming scientific databases and computational data pipelines.
+					
+					.signup.col-xs-12.col-sm-6.col-sm-offset-1
+						h2.signupText DataJoint&#x2122; is a free, open-source framework for programming scientific databases and computational data pipelines. <br><br> Sign up for an account and gain access to free online resources.
+					.signup.col-xs-12.col-sm-4
+						//- a.btn.btn-lg.btn-success#signupButton(data-toggle="modal", href="#signupModal") Sign up
+						a.btn.btn-lg.btn-success#signupButton(href="https://accounts.datajoint.io/signup") Sign up
+							
+		section.about-section#about
+			.container-fluid
+				.col-lg-12
+					
+					img#abouticon(src= static_path + "/images/dataJointIcon.png" alt="DataJoint icon")
+					p.aboutText
+						|	Scientific data are increasingly large, complex, and multi-modal. Data integrity and flexible access are more important than ever. DataJoint provides a principled yet intuitive approach for science labs or multi-lab collaborations to organize, process, and share their data.
+						br 
+						br
+						| With DataJoint, science labs may build and share powerful data pipelines with efficient investment of time and resources. 
+						br
+						| DataJoint solves common data challenges and allows labs to focus on what they do best.
+					br
+
+		section.howto-section#howto
+			.container-fluid
+				.col-lg-12
+					h1.section-title Get Started
+					br
+					br
+					.col-xs-12
+						.product-link
+								
+							a.col-sm-3.col-sm-offset-3.DJ-github(href="https://github.com/datajoint/datajoint-python", target="_blank")
+								i.fa.fa-github.fa-3x.faicon(aria-hidden="true")
+								.faicon.product-text &nbsp;Python
+							a.col-sm-3.DJ-github(href="https://github.com/datajoint/datajoint-matlab", target="_blank")
+								i.fa.fa-github.fa-3x.faicon(aria-hidden="true")
+								.faicon.product-text &nbsp;MATLAB
+							.product-text-group.product-text.col-xs-12.col-sm-8.col-sm-offset-2
+								br
+								span.linebreak
+									| Find documentation at&nbsp;
+								span.linebreak
+									a(href="http://docs.datajoint.io", target="_blank")
+										i.fa.fa-book.faicon(aria-hidden="true") 
+										.faicon &nbsp;http://docs.datajoint.io
+								br
+								span.linebreak
+									| Find tutorials at&nbsp;
+								span.linebreak
+									a(href="http://tutorials.datajoint.io", target="_blank")
+										i.fa.fa-graduation-cap.faicon(aria-hidden="true") 
+										.faicon &nbsp;http://tutorials.datajoint.io
+
+					
+		
+		section.contact-section#contact
+			.container-fluid
+				.col-lg-12
+					h1.section-title Looking for more?
+					//- h2 To learn more or to open an account with DataJoint.io:
+					//- a.btn.btn-lg.btn-success#signupButton(data-toggle="modal", href="#signupModal") Sign up
+					//- br
+					h3 Learn about DataJoint Elements: Curated computational workflows for neurophysiology experiments
+					a(href="https://elements.datajoint.io", target="_blank")
+						btn.btn.btn-lg.btn-primary#slackregister
+							img.slackicon(src= static_path + "/images/DJOStemp.png")
+					br
+					h3 Connect with the experts:
+					.djNeuroCard
+						a(href="https://djneuro.io", target="_blank")
+							img(src=static_path + "/images/djNeuroLogo.png")
+						p #[a(href="https://djneuro.io", target="_blank") DataJoint NEURO] provides resources, tools, and services for projects using DataJoint, with a focus on neuroscience and AI.
+					br
+					h3 Connect with the community:
+					a(href="https://join.slack.com/t/datajoint/shared_invite/enQtMjkwNjQxMjI5MDk0LTQ3ZjFiZmNmNGVkYWFkYjgwYjdhNTBlZTBmMWEyZDc2NzZlYTBjOTNmYzYwOWRmOGFmN2MyYzU0OWQ0MWZiYTE", target="_blank")
+						btn.btn.btn-lg.btn-primary#slackregister
+							img.slackicon(src= static_path + "/images/slackLogo.png")
+
+		include includes/footer.pug
+
+	//- jQuery and bootstrap core javascripts and custom js
+	script(src="https://use.fontawesome.com/496f29e789.js")
+
+	include includes/cookieConsent.html
+
+	script.
+		$(".info-hover-text").mouseover(function(){
+			$("#playgroundTextBefore").hide()
+			$("#playgroundTextAfter").show();
+		}).mouseleave(function() {
+			$("#playgroundTextAfter").hide();
+			$("#playgroundTextBefore").show()
+		});
+
