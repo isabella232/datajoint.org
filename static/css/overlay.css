@@ -9,7 +9,6 @@
     background-color: rgba(0,0,0, 0.9);
     background-image: url(../images/sandiego.jpg); 
     background-size: cover;
-    /* background-image: url(../images/washingtonDC.png); */
     overflow-x: hidden;
     transition: 0.5s;
 }

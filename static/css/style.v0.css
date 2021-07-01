@@ -18,38 +18,6 @@
       font-family: 'Abel', sans-serif;
   }
 
-/* body {
-    width: 100vw;
-    height: 100%;
-    font-family: 'Abel', sans-serif;
-}
-
-html {
-    width: 100%;
-    height: 100%;
-} */
-
-/* nav.navbar {
-    min-height: 70px;
-    margin-bottom: 0;
-}
-
-.nav, .navbar-nav {
-    height: 70px;
-    padding-top: 10px;
-    font-size: 1.8rem;
-}
-
-.nav li.dropdown {
-    top: -12px;
-}
-.nav li.dropdown a.dropdown-toggle {
-    height: 70px;
-    padding-top: 27px;
-} */
-
-
-
 .alert {
     position: relative;
     z-index:990;
@@ -91,11 +59,9 @@ html {
 img#toplogo {
     width: 90%;
     max-width:600px;
-    /*min-width: 200px;*/
 }
 
 section#catchphrase {
-    /*border-top: dotted 4px #78d5d7;*/
     padding-top: .5%;
     padding-bottom: 2.5%;
 }
@@ -108,7 +74,6 @@ p.catchText {
 
 /* before login */
 section#signup-banner {
-    /*border-top: solid 20px #78d5d7;*/
     border-bottom: solid 20px #78d5d7;
     padding: 10% 0;
     background-color: #b1b1b1;
@@ -117,10 +82,6 @@ section#signup-banner {
     background-size: cover;
     background-position: top right;
     background-attachment: fixed;
-}
-
-.signup {
-    text-align: center;
 }
 
 .signupText {
@@ -149,13 +110,6 @@ i.fa.fa-exclamation-circle#playgroundInfo {
     background-size: cover;
     /*background-color:#f2f8fc; lightest tint of vathesblue*/
     border-bottom: solid 27px #78d5d7; /* DataJoint darkblue*/
-}
-
-.login-text {
-    margin-right: 15px;
-    line-height: 2.3;
-    font-size: 2.0rem;
-    float: right;
 }
 
 h1.section-title {
@@ -340,25 +294,6 @@ span.linebreak {
     border-top: solid 27px #ffbf60; /* DataJoint yellow*/
 }
 
-
-
-#signupButton {
-    padding: 32px 80px;
-    transform: translateY(23%);
-    font-size: 2.9em;
-    background-color: #57c0d1; /*darker blue square color*/
-    border-color: #54a8b7;
-    border-right-width: 2px;
-    border-bottom-width:2px;
-    border-top-width: 0px; 
-    border-left-width: 0px;
-    color: white;
-}
-#signupButton:hover {
-    background-color: #94c4c9; /*darker blue square color*/
-    border-color: #94c4c9;
-    color: white;
-}
 
 #launchButton {
     padding: 32px 80px;
@@ -588,10 +523,3 @@ img.playgroundscreenshot {
         width: 90%;
     }
 }
-
-/* ---------- Sign Up Form ------------- */
-/* input[type="checkbox"] {
-    margin:  4px -12px 0;
-} */
-
-

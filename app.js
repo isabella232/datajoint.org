@@ -6,7 +6,6 @@ const port = config.port;
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const flash = require('connect-flash');
 const session = require('express-session');
 const MemoryStore = require('memorystore')(session)
 
@@ -38,24 +37,7 @@ app.use('/static', express.static('static'));
 app.use(express.static('icons')); // serve icons at root    
 app.use(favicon(path.join(__dirname, 'static', 'favicon.ico')));
 
-app.use(session({
-    store: new MemoryStore({
-        checkPeriod: 86400000 // prune expired entries every 24h
-    }),
-    secret: config.sessionSecret,
-    resave: false,
-    saveUninitialized: false
-}));
-
 app.use(cookieParser('keyboard cat'));
-app.use(flash());
-// add utility to invoke flash messages
-app.use(function (req, res, next) {
-    res.locals.success = req.flash('success');
-    res.locals.error = req.flash('error');
-    next();
-})
-
 
 //---------------------------------- Basic Routes ----------------------------------
 
