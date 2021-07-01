@@ -1,3 +1,4 @@
+# docker-compose -f docker-compose-dev-yaml up
 version: '2.4'
 x-net: &net
   networks:
@@ -20,7 +21,7 @@ services:
       - URL=datajoint.io
       - HTTPS_PORT=2000
       - ADD_hub_TYPE=REST
-      - ADD_hub_ENDPOINT=datajoint.org:3456
+      - ADD_hub_ENDPOINT=datajoint.org:3000
       - ADD_hub_PREFIX=/
     ports:
       - "443:2000"
