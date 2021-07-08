@@ -181,7 +181,7 @@ nav .nav-content-container {
   position: relative;
   width: 62%;
   padding: 5% 10% 5% 5%;
-  background-image: url('/static/images/djCaveFilterBlur.png');
+  background-image: url('./static/images/djCaveFilterBlur.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
