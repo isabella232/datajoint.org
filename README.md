@@ -1,9 +1,5 @@
 # datajoint.org
 
-Static website place holder until the replacement is built.
+Static website for datajoint.org containing resources for open source projects related to DataJoint.
 
-To launch just do `docker-compose -f docker-compose-dev-yaml up`
-
-# ENV file
-PORT: port to run the express server on, typically default to 3000, if change then you need to change the corresponding port in docker-compose for fake service
-HOST: Host name for the website where the default is 'https://datajoint.org'
+Run a live server on the root to view the content. (VS code extension, or something generic like `python -m http.server PORT#`)
