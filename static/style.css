@@ -39,7 +39,11 @@
 * { 
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box; /* Firefox, other Gecko */
-  box-sizing: border-box; 
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+  margin:0;
+	padding:0;
 }
 
 html, body {
@@ -334,7 +338,14 @@ nav .nav-content-container {
 
 .right-container .grid-cell {
   position: relative;
-  padding: 0 36px 16px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 170px;
+}
+
+.right-container .grid-cell .grid-title {
+  margin-bottom: 12px;
 }
 
 .demo-container {
@@ -422,6 +433,10 @@ img.demo-gif {
   .right-container .grid-container {
     display: flex;
     flex-direction: column;
+  }
+
+  .right-container .grid-container .grid-cell {
+    min-height: unset;
   }
 
   .grid-cell:first-of-type {
@@ -719,12 +734,13 @@ footer .container .content {
 
 footer .container .content .footer-column {
   margin-left: 60px;
-  height: 33%;
+  margin-bottom: 24px;
 }
 
 footer .container .content .footer-column .footer-heading {
   font-weight: 700;
   font-size: 1.2rem;
+  margin-bottom: 12px;
 }
 
 footer .container .content .footer-column ul {
